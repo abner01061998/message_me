@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MessageMe</title>
+    <title>Chatify</title>
+    <%= favicon_link_tag %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <%= stylesheet_link_tag "custom", media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", 'data-turbo-track': 'reload' %>
+    <%= javascript_importmap_tags %>
+    
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render "layouts/navbar" %>
+    <div class="ui container">
+    <%= render "layouts/flash" %>
+      <%= yield %>
+    </div>
   </body>
 </html>
