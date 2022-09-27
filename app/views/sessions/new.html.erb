@@ -30,10 +30,9 @@
       </div>
     </div>
     <div class="middle aligned column ">
-      <div class="ui big button purple">
-        <i class="signup icon"></i>
-        Sign Up
-      </div>
+      <%= link_to users_new_path, class: 'ui big button purple'  do %>
+        <i class="signup icon"></i> Sign Up
+      <% end %>
     </div>
   </div>
   <div class="ui vertical divider">
